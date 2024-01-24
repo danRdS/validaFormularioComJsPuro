@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="website icon" type="png" href="assets/images/Formulários (1).png">
+    <title>Formulário</title>
+</head>
+<body>
+    <main>
+        <fieldset>
+            <legend>Formulário</legend>
+            <form>
+
+                <section class="area-campoForm">
+                    <input type="text" name="nome" id="nome" placeholder="" value="" required>
+                    <label for="nome">Nome</label>
+                    <section class="info">Digite apenas o primeiro e o segundo nome. Este campo aceita apenas letras.</section>
+                    <div class="erro">Este campo aceita apenas letras</div>
+                </section>
+
+                <section class="area-campoForm">
+                    <input type="text" name="cpf" id="cpf" placeholder="" value="" maxlength="11" required>
+                    <label for="cpf">CPF</label>
+                    <section class="info">Digite apenas os 11 números sem hifens ou espaços.</section>
+                    <div class="erro">O cpf deve conter 11 números</div>
+                </section>
+
+                <section class="area-campoForm">
+                    <input type="text" name="idade" id="idade" placeholder="" value="" min="18" max="100" maxlength="3" required>
+                    <label for="idade">Idade</label>
+                    <section class="info">A idade deve ser entre 18 e 100 anos.</section>
+                    <div class="erro">A idade mínima deve ser entre 18 e 100 anos</div>
+                    <div class="erro">Este campo aceita apenas números</div>
+                </section>
+
+                <button type="submit">Salvar</button>
+
+                <button type="reset" value="reset" onclick="limparCampos(areaCampoForm)">reset</button>
+
+            </form>
+        </fieldset>
+
+        <dialog class="oculto">
+            <h3>Dados salvos com sucesso!</h3>
+            <fieldset>
+                <legend>Informações</legend>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </fieldset>
+            <button type="button" onclick="fecharDialog()">Ok</button>
+        </dialog>
+    </main>
+    
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
